@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="RussianCal.SelectControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RussianCal"
+             mc:Ignorable="d" 
+              Height="80" >
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="1*" />
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image  x:Name="ArtistImage"  Margin="5"
+                    Source="C:\Users\richb\Downloads\Boris.png" Grid.Column="1"
+                    Stretch="Fill"></Image>
+
+        <TextBlock x:Name="CardTextBlock" Text="БОРИС" FontSize="20" Margin="20" VerticalAlignment="Center"
+                   Grid.Column="2"></TextBlock>
+
+        <CheckBox HorizontalAlignment="Right" x:Name="isSelected" Grid.Column="0" Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
+  IsChecked="False"></CheckBox>
+        
+    </Grid>
+</UserControl>

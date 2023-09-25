@@ -5,10 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RussianCal"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      
       Title="SelectionPage">
 
-    <Grid>
-        <TextBlock FontSize="40" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">Яйца</TextBlock>
+    <Grid Opacity="50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="ArtistList" Grid.Column="0" ></ListBox>
     </Grid>
 </Page>

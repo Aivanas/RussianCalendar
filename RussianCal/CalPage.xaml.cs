@@ -12,14 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignThemes.Wpf;
 
 namespace RussianCal
 {
     /// <summary>
     /// Логика взаимодействия для CalPage.xaml
     /// </summary>
+    /// 
+
+
     public partial class CalPage : Page
     {
+        public static DateTime date;
+        
         public CalPage()
         {
             InitializeComponent();
@@ -37,9 +43,19 @@ namespace RussianCal
             for (int i = 0; i < monthDays[month - 1]; i++)
             {
                 Button button = new Button();
-                button.Content = (i + 1).ToString();
+                ButtonControl buttonControl = new ButtonControl();
+                buttonControl.DateTextBlock.Text = (i + 1).ToString();
+                button.Content = buttonControl;
+                button.Padding = new Thickness(0);
+
+                //button.Content = (i + 1).ToString();
+
+
+
                 button.Margin = new Thickness(1);
                 button.Name = "Button" + (i+1);
+                button.Style = (Style)Application.Current.Resources["MaterialDesignPaperSecondaryDarkButton"];
+                button.Height = button.Width;
                 button.Click += DateButton_OnClick;
 
 
@@ -63,8 +79,10 @@ namespace RussianCal
         }
         private void DateButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Button clickedButton = (Button)sender;
-            MessageBox.Show(clickedButton.Name.ToString());
+            //Button clickedButton = (Button)sender;
+            //MessageBox.Show(clickedButton.Name.ToString());
+
+            //PagesFrame.Content = new SelectionPage();
         }
 
 

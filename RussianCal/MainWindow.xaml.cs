@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignThemes.Wpf;
 
 namespace RussianCal
 {
@@ -24,11 +25,21 @@ namespace RussianCal
         {
             InitializeComponent();
             PagesFrame.Content = new CalPage();
+            /*
+            DateSelectorControl dateSelectorControl = new DateSelectorControl();
+            dateSelectorControl.DateTextBox.Text = "20е абупа 2023";
+            ToolBar.Children.Add(dateSelectorControl);
+            Grid.SetColumn(dateSelectorControl, 1);*/
+            
+            
         }
 
         private void RightButton_Click(object sender, RoutedEventArgs e)
         {
-            PagesFrame.Content = new SelectionPage();
+
+            
+            
+
         }
     }
 
