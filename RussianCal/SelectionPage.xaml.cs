@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace RussianCal
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для SelectionPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SelectionPage : Page
     {
-        public MainWindow()
+        public SelectionPage()
         {
             InitializeComponent();
-            PagesFrame.Content = new CalPage();
-        }
-
-        private void RightButton_Click(object sender, RoutedEventArgs e)
-        {
-            PagesFrame.Content = new SelectionPage();
         }
     }
-
-
-   
-    
-
 }
