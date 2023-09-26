@@ -13,8 +13,8 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="DateTextBlock"></TextBlock>
-            <Image MinHeight="40" MinWidth="40"
-                Grid.Row="1" Source="/shaman.png" >
+            <Image x:Name="ButtonImage" MinHeight="40" MinWidth="40"
+                Grid.Row="1" Source="/music.png" >
             </Image>
     </Grid>
 

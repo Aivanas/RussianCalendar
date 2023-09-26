@@ -28,17 +28,18 @@
                 Content="{materialDesign:PackIcon ArrowLeft}"
                 Height="50"
                 ToolTip="Icon"
-                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="LeftButton_Click" />
 
 
             <DatePicker
+                x:Name="DatePickerName"
                 Grid.Column="1"
                 Margin="10"
                 materialDesign:HintAssist.Hint="Выберите месяц"
                 materialDesign:HintAssist.HelperText="Нафиг он неуправляемого цвета"
                 materialDesign:DatePickerAssist.OutlinedBorderInactiveThickness="1"
                 materialDesign:DatePickerAssist.OutlinedBorderActiveThickness="1.5"
-                Style="{StaticResource MaterialDesignOutlinedDatePicker}" />
+                Style="{StaticResource MaterialDesignOutlinedDatePicker}" SelectedDateChanged="DatePickerName_SelectedDateChanged" />
             
             <Button
                 x:Name="RightButton" Margin="5" FontSize="40" Grid.Column="2" Click="RightButton_Click"
@@ -47,7 +48,25 @@
                 Height="50"
                 ToolTip="Icon"
                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
-                  
+
+            <TextBlock x:Name="MiddleTextBlock"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       FontSize="20"
+                       Grid.Column="1" Visibility="Hidden"></TextBlock>
+
+            <Button
+                x:Name="LeftSubButton" FontSize="40" Margin="5"
+                Visibility="Hidden"
+                Style="{StaticResource MaterialDesignPaperDarkButton}"
+                Content="{materialDesign:PackIcon ArrowLeft}"
+                Height="50"
+                ToolTip="Icon"
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                Click="LeftSubButton_Click" />
+
+
         </Grid>
 
 

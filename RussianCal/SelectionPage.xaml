@@ -12,6 +12,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="ArtistList" Grid.Column="0" ></ListBox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="ArtistList" Grid.Column="0" Grid.Row="0" ></ListBox>
+        <Button Style="{StaticResource MaterialDesignPaperDarkButton}"
+            Grid.Row="1" Click="Button_Click">Сохранить и выйти</Button>
     </Grid>
 </Page>
